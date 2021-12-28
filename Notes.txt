@@ -1,0 +1,13 @@
+1. Convert Focal length from mm to pixels
+
+Depending on how accurate you need the focal you can get a good quick estimate if you know either of the following:
+
+CCD/CMOS sensor physical size
+Horizontal field of view (FOV)
+If you know the sensor's physical width in mm, then the focal in pixels is:
+
+focal_pixel = (focal_mm / sensor_width_mm) * image_width_in_pixels
+
+And if you know the horizontal field of view, say in degrees,
+
+focal_pixel = (image_width_in_pixels * 0.5) / tan(FOV * 0.5 * PI/180)
